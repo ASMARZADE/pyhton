@@ -1,0 +1,218 @@
+#1
+'''from math import *
+x,y=map(float,input('Koordinatlari daxil edin:').split(' '))
+if y<=4-abs(x) and y>=cos(2*x) and (y-10)**10 +(x+4)**10>=100 or (y-1)**2+(x-3)**2<=4 and y>=cos(2*x)and (x<3 or y>=4-abs(x)) :
+    print('Oblasta daxildir')
+else:
+    print('Oblasta daxil deyil')'''
+
+
+##task 2
+'''def reqemcem(a):
+    s=0
+    while a>0:
+        s=s+a%10
+        a=a//10
+    return s
+
+def sadeeded(b):
+    for i in range(2,b):
+        if b%i==0:
+            return False
+    return True
+
+from random import randint
+t=[]
+n=[randint(20,50) for _ in range(int(input('uzunluq ')))]
+print('list-->',n)
+for k in n:
+   if sadeeded(reqemcem(k)):
+       t=t+[k]
+print('reqem cemi sade ',t)'''
+
+##task 3
+'''t=input('setri daxil et ')
+a=input('axtarilan soz ')
+i=0;s=0
+while i<len(t):
+    if t[i:i+len(a)]==a:
+        s=s+1
+    i=i+1
+print(s)'''
+
+##task 4
+'''def faktorial(a):
+    p=1
+    for i in range(1,a+1):
+        p=p*i
+    return p
+n=int(input('n tam ededi '))
+x=float(input('x i yaz '))
+s=0
+for i in range(1,n+1):
+    s=s+((x**i)/faktorial(i))
+print('{:2.3f}'.format(s))'''
+
+
+##task 5
+
+'''def bolens(a):
+    s=0
+    for i in range(1,a+1):
+        if a%i==0:
+            s=s+1
+    return s
+def kvcem(m):
+    t=0
+    while m>0:
+        t=t+((m%10)**2)
+        m=m//10
+    return t
+
+from random import randint
+l1=[randint(10,99) for _ in range(int(input('say ')))]
+print('list1',l1)
+l1_bolen=[]
+l2=[]
+l2b=[]
+cut=[]
+for k in l1:
+    l1_bolen=l1_bolen+[bolens(k)]
+    l2=l2+[kvcem(k)]
+for i in l2:
+    l2b=l2b+[bolens(i)]
+print('list 2',l2)
+print('lis1 1 bolenleri ', l1_bolen)
+print('list 2 bolenleri', l2b)
+for i in range (len(l2)):
+    cut+=[(l1_bolen[i],l2b[i])]
+print(cut)
+muqayise=[]
+s=0
+e=0
+for i in cut:
+    if i[0]>i[1]:
+        s=s+1
+        muqayise=muqayise+[1]
+    else:
+        muqayise=muqayise+[0]
+        e=e+1
+print('muqayise',muqayise)
+print()
+if s>e:
+    print('netice: List1-de bolenlerin sayi \
+cox olan ededlerin sayi daha coxdu')
+else:
+    print('Netice: List2 de bolenlerin sayi \
+cox olan ededlerin sayi daha coxdu')'''
+    
+##task 6
+'''def reqemcem(a):
+    s=0
+    while a>0:
+        s=s+a%10
+        a=a//10
+    return s
+
+def ferq(a):
+    s=0
+    while a>10:
+        t=-(a%10)
+        a=a//10
+        s=s+t
+    else:
+        t=a%10
+        s=s+t
+    return s
+
+##sotlar
+def bubble(A):
+    for i in range(len(A)-1):
+        for j in range(len(A)-i-1):
+            if A[j]>A[j+1]:
+                A[j],A[j+1]=A[j+1],A[j]
+    return A
+##selection
+def selection(A):
+    for i in range(len(A)-1):
+        mi=i
+        for j in range(i+1,len(A)):
+            if A[j]<A[mi]:
+                mi=j
+        if i!=mi:
+            A[i],A[mi]=A[mi],A[i]
+    return A
+
+from random import choice
+def quick(A):
+    if len(A)<=1:
+        return A
+    x=choice(A)
+    b1=[b for b in A if b<x]
+    bx=[b for b in A if b==x]
+    b2=[b for b in A if b>x]
+    return quick(b1)+bx+quick(b2)
+
+from random import randint
+a1=[randint(100,999) for _ in range(int(input('uzunl ')))]
+a2=[]
+a3=[]
+for i in a1:
+    a2=a2+[reqemcem(i)]
+    a3=a3+[ferq(i)]
+print('A1',a1)
+print('A2', a2)
+print('A3', a3)
+print('A1 sortu',bubble(a1))
+print('A2 sortu', selection(a2))
+print('A3 sortu', quick(a3))'''
+
+
+##from random import randint
+##A=[randint(100,999) for _ in range(int(input('uzunl ')))]
+##print('asort', quick(A))
+##print(A)
+
+
+
+##task 7
+'''
+def minn(s):
+    m=s[0]
+    for i in s:
+        if m>i:
+            m=i
+    return m
+
+def capmatris(a):
+    for i in range(n):
+        for j in range(n):
+            print(a[i][j], end='\t')
+        print()
+    print('B matrisi',end='\n')
+        
+def deyismatris(a):
+    s=[]
+    for i in range(n):
+        for j in range(n):
+            if i>j:
+                a[i][j]='bbb'
+            elif i<j:
+                a[i][j]='aaa'
+            else:
+                s=s+[a[i][j]]
+                if a[i][j]==minn(s):
+                    k=i,j
+            print(a[i][j], end='\t')
+        print()
+    print(s)
+    print('Minimal element',minn(s),'indeks',k)
+    
+
+from random import randint
+n=int(input('olculeri yaz '))
+a=[[randint(10,99) for _ in range(n)] for _ in range(n)]
+capmatris(a)
+deyismatris(a)'''
+
+

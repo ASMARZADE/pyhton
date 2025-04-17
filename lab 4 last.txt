@@ -1,0 +1,268 @@
+##task 1
+'''a=4
+while a<10:
+    a=a+1
+    if a==7 or a==9:
+        continue
+    else:
+        print(a,end=' ')'''
+
+'''task 2 (method 1)'''
+##a=int(input('enter a: '))
+##s=0
+##while a!=0:
+##    s=s+a
+##    a=int(input('enter a: '))
+##print(s)
+
+
+'''task 2 (method 2)'''
+##s = 0
+##while True:
+##    a = int(input('enter a: '))
+##    if a == 0: break
+##    s=s+a
+##print(s)
+
+'''task 3 (method 1)'''
+##a=int(input('enter a: '))
+##t=0
+##s=0
+##while a!=-1:
+##    t=t+1
+##    s=s+a
+##    a=int(input('enter a: '))
+##print(s/t)
+
+'''task 3 (method 2)'''
+##s=0
+##t=0
+##while True:
+##    a=int(input('enter a: '))
+##    if a==-1:
+##        break
+##    s=s+a
+##    t=t+1
+##print(s/t)
+
+
+'''task 4'''
+##s=0
+##a=int(input('enter a: '))
+##while a>0:
+##    s=s+a%10
+##    a=a//10
+##print(s)
+
+
+'''task 5'''
+##a=int(input('enter a: '))
+##b=a
+##s=0
+##while a>0:
+##    s=s*10+a%10
+##    a=a//10
+##if s==b:
+##    print('polindrom')
+##else:
+##    print('deyl')
+
+
+'''task 6 muelime'''
+##a = int(input('enter a: '))
+##while a > 0:
+##    if a % 10 == a // 10 % 10:
+##        print('he')
+##        break
+##    a//= 10
+##else:
+##    print('yox')
+
+
+'''task 6 men'''
+##a=int(input('enter a : '))
+##while a>0:
+##    s=a%10
+##    a=a//10
+##    if a%10==s:
+##        print('he')
+##        break
+##else:
+##    print('yox')
+
+
+'''task 7'''
+##for a in range(100,1000):
+##    s=0
+##    c=a
+##    while a>0:
+##        s=s+(a%10)**3
+##        a=a//10
+##    if s==c:
+##        print(s)
+
+'''task 9'''
+##n=int(input('enter n: '))
+##i=2
+##while i<=n:
+##    if n%i==0:
+##        print(i)
+##        n=n/i
+##    else:
+##        i=i+1
+
+
+'''task 9 2LIKDEN 10 LUGA '''
+##a=int(input('enter a: '))
+##s=0
+##t=0
+##while a>0:
+##    s=s+a%10*2**t
+##    t=t+1
+##    a=a//10
+##print(s)
+
+
+'''task 10   10 LUQDAN 2 LIYE '''
+##a = int(input('enter a: '))
+##s = 0
+##t = 0
+##while a > 0:
+##    s = s+ a%2 * 10**t 
+##    t= t+1
+##    a =a// 2
+##print(s)
+
+
+
+'''task 11'''
+##a1 = 0
+##a2 = 1
+##cem = 0
+##while cem < 50:
+##    a1 = a2
+##    a2 = cem
+##    print(cem, end = ' ')
+##    cem = a1 + a2
+
+
+'''task 12  A ''' 
+##n=int(input('enter n: '))
+##a=0
+##s=0
+##while a<=n:
+##    s=s+a/(1+a**3)**(1/2)
+##    a=a+1
+##print('{:5.2f}'.format(s))
+##print(('%5.2f' %s))
+##print(f'{s:5.2f}')
+
+'''B'''
+##n=int(input('enter n: '))
+##a=1
+##s=0
+##while a<=n:
+##    s=s+(a**a/a)
+##    a=a+1
+##print(s)
+##print('{:5.2f}'.format(s))
+##print(('%5.2f' %s))
+##print(f'{s:5.2f}')
+
+
+
+'''c'''
+##N=int(input('enter N: '))
+##n=1
+##s=0
+##while n<=N:
+##    s=s+(1.1**n+n**2)/(5*n)
+##    n=n+1
+##print(s)
+##print('{:5.2f}'.format(s))
+##print(('%5.2f' %s))
+##print(f'{s:5.2f}')
+
+
+'''task 13'''
+##print('1)reqemleri topla')
+##print('2)reqemleri vur')
+##print('3)cix')
+##while True:
+##    a=int(input('enter: '))
+##    b=int(input('bir secim edin: '))
+##    s=0
+##    t=1
+##    if b==1:
+##        while a>0:
+##            s=s+a%10
+##            a=a//10
+##        print(s)
+##    elif b==2:
+##        while a>0:
+##            t=t*(a%10)
+##            a=a//10
+##        print(t)
+##    elif b==3:
+##        exit('wrong')
+
+
+
+'''task 14'''
+##n=int(input('enter n: '))
+##for i in range(1,n+1):
+##    s=1
+##    while i>=s:
+##        s=s*10
+##    if (i**2)%s==i:
+##        print(i)
+
+
+
+
+
+'''task 15  VACIB'''
+##a=int(input('enter a: '))
+##for i in range(1,a+1):
+##    s=0
+##    c=i
+##    b=i
+##    while i>0:
+##        e=i%10
+##        i=i//10
+##        if e==0 or c%e!=0:
+##            break
+##    else:
+##        print(c,end=' ')
+
+
+##ELAVE
+        
+'''for i in range(1,10):
+    for k in range(1,10):
+    print(i*k,end=' ')'''
+
+
+'''for i in range(0,10):
+    for k in range(0,10):
+        print(f'{i}{k}',end='\t')
+    print()'''
+
+'''task 7  FOR ME '''
+##a=int(input('enter a : '))
+##s=0
+##t=0
+##c=a
+##b=a
+##e=0
+##while a>0:
+##    a=a//10
+##    t=t+1
+##while b>0:
+##    e=e+(b%10)**t
+##    b=b//10
+##if e==c:
+##    print(e)
+##    
+     
+

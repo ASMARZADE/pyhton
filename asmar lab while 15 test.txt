@@ -1,0 +1,182 @@
+#task 1 
+
+
+#2. Klaviaturadan 0 girişinə qədər daxil edilən
+#bütün ədədlərin cəmini ekrana çıxaran
+#proqram yazın. Yəni, proqram istifadəçidən
+#ədəd daxil etməyini istəyir, əgər daxil
+#edilən ədəd 0-dırsa, proqram daxil
+#edilmiş ədədlərin cəmini ekrana çıxarır.
+'''n=int(input("enter n "))
+cem=0
+while n!=0:
+    cem+=n
+    n=int(input("enter n "))
+print(cem)'''
+
+#task 3    -1 yazılanadək daxil olunan ədədlərin ədədi ortasını tapın
+'''n=int(input("enter n = "))
+cem=0
+ededlerin_sayi=0
+while n!=-1:
+    cem+=n
+    ededlerin_sayi+=1
+    n=int(input("enter n = "))
+print("ededlerin ededi ortasi = " , cem/ededlerin_sayi)'''
+#task 4    Natural ədəd daxil edin və
+#onun rəqəmlərinin cəmini tapın.
+#Natural ədədi daxil edin: 12345
+#Rəqəmlərin cəmi 15.
+'''n=int(input("Naatural ededi daxil edin "))
+cem=0
+while n>0:
+    reqem=n%10
+    cem+=reqem
+    n//=10
+print(cem)'''
+# task 5 Daxil edilən ədədin
+#polindrom olduğunu yoxlayın (məs: 16461 polindrom ədəddir)
+'''n = int(input("Bir eded daxil edin: "))
+a = n
+b= 0
+while n  > 0:
+    c = n  % 10 #1
+    b = (b * 10) + c
+    n//= 10
+if a == b:
+    print('polindrom ededdir.')
+else:
+    print('polindrom eded deyil.')'''
+# task 6  Natural ədədi daxil edin
+#və iki eyni qonşu rəqəmin mövcud olub-olmadığını müəyyən
+#edin.
+#Natural ədədi daxil edin:12342
+#– Yox.
+#Natural ədədi daxil edin:12245
+#– Hə
+'''n=int(input("natural ededi daxil edin")) #12342
+a=n
+s=0
+while n>0: 
+    if n % 10== n//10%10:
+        print("he")
+        break
+    n//=10
+else:
+    print("yox")'''
+#task 7
+#Bütün üç rəqəmli
+#Armstronq ədədlərini tapan proqram yazın.
+#Natural ədəd o vaxt
+#Armstronq ədədi adlanır ki, N dərəcəsinə
+#yüksəldilmiş (N – ədəddə olan rəqəmlərin sayıdır)
+#rəqəmlərin cəmi ədədin özünə bərabərdir.
+#Məsələn, 153 = 13 + 53 + 33
+'''for i in range (100,1000):
+    b=i
+    cem=0
+
+    while i>0:
+        cem+=(i%10)**3
+        i//=10
+        if cem==b:
+            print(cem)'''
+#Verilən ədədi sadə vuruqlarına ayıran proqram yazın
+'''
+n=int(input("ededi daxil edin "))
+while n>0:
+    reqem=n%10
+    
+'''
+#task 9   2-lik say sistemində
+#verilən ədədi 10-luq say sisteminə çevirən proqram yazın.
+'''a=int(input('enter a: '))
+s,t=0,0
+while a>0:
+    s=s+a%10*2**t
+    t=t+1
+    a=a//10
+print(s)
+'''
+#task 10   10-luq say sistemində
+#verilən ədədi 2-lik say sisteminə çevirən proqram yazın
+'''a = int(input('enter a: '))
+s = 0
+t = 0
+while a > 0:
+    s = s+ a%2 * 10**t 
+    t= t+1
+    a =a// 2
+print(s)'''
+# task 11 [0, 50] aralığında
+#Fibonaççi ardıcıllığını ekrana çıxaran proqram yazın.
+#Fibonaççi ardıcıllığı hər növbəti
+#həddi əvvəlki iki həddin cəmindən
+#ibarət olan ardıcıllıqdır.
+##11
+a1 = 0
+a2 = 1
+cem = 0
+while cem < 50:
+    a1 = a2
+    a2 = cem
+    print(cem, end = ' ')
+    cem = a1 + a2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

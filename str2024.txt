@@ -1,0 +1,111 @@
+
+#Program to sort a string in alphabetical
+# order by swapping the characters in the string
+'''string = input("Enter the string : ")
+j = 0
+str1 = ""
+temp = 0
+A=[]
+for i in string:
+    A=A+[i]
+
+for i in range(len(A)):
+    for j in range(len(A)):
+        if(A[j] < A[i]):
+            A[i],A[j]=A[j],A[i]
+print("The sorted string is : ")
+for i in A:
+    str1=str1+i
+print(str1)'''
+
+
+
+
+
+
+# Python program to remove all characters in a string except alphabet
+
+input_str = “face i45s th678e inde56x o456$%f min567d”
+newString = ”
+
+# only the alphabets are defined as valid characters
+valid = “abcdefghijklmnopqrstuvwxyz”   
+for char in input_str:
+    if char in valid:
+        newString += char      # characters other than valid are not ignored
+print (newString)
+
+
+# Python program to replace words with different one //// bayram, haqqi
+line=input("enter the string:")
+str1=input("the word we looking for:")
+new_=input("the new part:")
+length=len(str1)
+count=0
+i=0
+while (i)<len(line):
+    if line[i:i+length]==str1:
+        count+=1
+        line=line[:i]+new_+line[i+length:]
+        print(line)
+    i+=1
+print(line)
+print(count)
+
+# Python program to check password
+
+A=input("Email unvanini daxil edin: ")
+print(A)
+D="qwertyuiopasdfghjklzxcvbnm1234567890_.@"
+count=0
+count1=0
+count2=0
+count3=0
+say=0
+g=len(A)
+for i in range(len(A)):
+    if A[i]=="@":
+        count+=1
+    if A[i]==" ":
+        count1+=1
+    if A[i]=="(" or A[i]==")" or A[i]=="," or A[i]==":" or A[i]==";" or A[i]==">" or A[i]=="<" or A[i]=="!" or A[i]=="[" or A[i]=="]" or A[i]=="/":
+        count2+=1
+for t in range(len(A)):
+    if A[t]=="@":
+        print(t)
+for j in range(t,g-1):
+    if A[j]==".":
+        count3+=1
+print(count3)
+print(count)
+print(count1)        
+print(count2)
+for s in range(len(A)):
+    if count>1 or count==0:
+        print("Email unvaninda yalniz 1 dene @ isaresi olmalidir.")
+        break
+
+
+
+# Python program to find number of combinations
+'''def comb(L):
+    count=0
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                if (i!=j and j!=k and i!=k):
+                    print(L[i],L[j],L[k])             
+
+comb(["a","b","c"])'''
+
+def comb(L):
+    count=0
+    for i in range(3):
+        for j in range(3):
+            for k in range(3):
+                #if (i!=j and j!=k and i!=k):
+                print(L[i],L[j],L[k])
+                count
+                      
+
+comb(["a","b","c"])

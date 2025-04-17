@@ -1,0 +1,126 @@
+
+
+#bubble sort ile mueyyen qaydaya gore cesidleme-ilk yarisini reqemleri cemine gore, 2ci yarisini da reqemleri cemine gore artan
+#Bubble sort for 1st and 2nd half list according to sum of digits of number in ascending order
+from random import randint
+def sumdigits(num):
+    summ = 0
+    while num:
+        summ += num%10
+        num //= 10
+    return summ
+N =  int(input("Enter length of the list"))
+a,b = map(int, input("[a,b] enter a,b range").split())
+lst = [randint(a, b) for i in range(N)]
+print("Unsorted", lst)
+
+ls1  = lst[:N//2]
+ls2 = lst[N//2:]
+from random import *
+for i in range(len(ls1)-1):
+    for j in range(len(ls1)-1):
+        if sumdigits(ls1[j]) > sumdigits(ls1[j+1]):
+            ls1[j], ls1[j+1] = ls1[j+1], ls1[j]
+            
+for i in range(len(ls2)-1):
+    for j in range(len(ls2)-1):
+        if sumdigits(ls2[j]) > sumdigits(ls2[j+1]):
+            ls2[j], ls2[j+1] = ls2[j+1], ls2[j]
+print("Sorted list", ls1+ls2)
+
+#'''
+
+def sumdigits(num):
+    summ = 0
+    while num:
+        summ += num%10
+        num //= 10
+    return summ
+
+
+N =  int(input("Enter length of the list"))
+a,b = map(int, input("[a,b] enter a,b range").split())
+lst = [randint(a, b) for i in range(N)]
+print("Unsorted", lst)
+
+for i in range(N//2-1):
+        min_i = i
+        for j in range(i+1, N//2, 1):
+            if sumdigits(lst[j]) < sumdigits(lst[min_i]):
+                min_i = j
+        if i != min_i:
+            lst[i] , lst[min_i] = lst[min_i], lst[i]
+
+for i in range(N//2, N-1):
+        min_i = i
+        for j in range(i+1, N, 1):
+            if sumdigits(lst[j]) < sumdigits(lst[min_i]): #if you want to make it descending order change less to greater
+                min_i = j
+        if i != min_i:
+            lst[i] , lst[min_i] = lst[min_i], lst[i]
+
+print("Sorted", lst)
+
+####
+from random import *
+def qsort(lst):
+    if len(lst) <= 1: return lst
+    A = lst[0]
+    B1 = [b for b in lst if sumdigits(b) < sumdigits(A)]
+    B2 = [b for b in lst if sumdigits(b) ==sumdigits(A)]
+    B3 = [b for b in lst if sumdigits(b) > sumdigits(A)]
+    return qsort(B1) + B2 + qsort(B3)
+
+def qsort1(lst):
+    if len(lst) <= 1: return lst
+    A = lst[0]
+    B1 = [b for b in lst if sumdigits(b) < sumdigits(A)]
+    B2 = [b for b in lst if sumdigits(b) == sumdigits(A)]
+    B3 = [b for b in lst if sumdigits(b) > sumdigits(A)]
+    return qsort(B1) + B2 + qsort(B3)
+
+def sumdigits(num):
+    cem = 0
+    while num:
+        cem += num%10
+        num //= 10
+    return cem
+
+N =  int(input("enter list length"))
+lst = [randint(10, 50) for i in range(N)]
+print("Unsorted_List", lst)
+
+ls1  = qsort(lst[:N//2])
+ls2 = qsort1(lst[N//2:])
+print("Sorted_List", ls1+ls2)
+
+
+
+from random import randint
+#QEYD: BU ELAVE METODDUR   /// ADDITIONAL METHOD-OPTIONAL
+#buble sort ile mueyyen qaydaya gore cesidleme-ilk yarisini reqemleri cemine gore, 2ci yarisini da reqemleri cemine gore artan
+from random import *
+for i in range(N-1):
+     for j in range(0, N-1-i,1):
+            if name(A[j]) > name(A[j+1]) :
+                A[j], A[j+1] = A[j+1], A[j]
+    return A
+
+def sumdigits(num):
+    cem = 0
+    while num:
+        cem += num%10
+        num //= 10
+    return cem
+
+    
+N =  int(input("Listin uzunlugunu daxil edin"))
+a,b = map(int, input("[a,b] araligini daxil edin").split())
+lst = [randint(a, b) for i in range(N)]
+print("Unsorted", lst)
+
+ls1  = buble_sort(lst[:N//2], sumdigits)
+ls2 = buble_sort(lst[N//2:], sumdigits )
+print("Sorted list", ls1+ls2)
+
+

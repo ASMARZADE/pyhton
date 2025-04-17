@@ -1,0 +1,89 @@
+'''def checkmoran(eded):
+    cem=0
+    say=0
+    copy_eded=eded
+    while eded!=0:
+        b=eded%10 #b ededin son reqemi
+        cem=cem+b
+        eded=eded//10
+    qismet=copy_eded//cem #qismet tam olmalidi
+    if copy_eded%cem==0:
+        for i in range(1,qismet+1):
+            if qismet%i==0:
+                say=say+1
+        if say==2 and copy_eded%cem==0:
+            print(copy_eded,"Moran")
+        else:
+            print(copy_eded,"Non-Moran")
+    else:
+        print(copy_eded,"Non-Moran")
+eded=int(input("Ededi daxil edin:"))
+checkmoran(eded)
+'''
+# 16
+'''
+def ters_eded(eded):
+    ters_eded = 0
+    while eded > 0:
+        reqem = eded % 10
+        ters_eded = ters_eded * 10 + reqem
+        eded //= 10
+    return ters_eded
+
+eded = int(input('Natural eded daxil edin: '))
+print("Ters eded: ", ters_eded(eded))
+'''
+# 15.
+'''
+def sade():
+    a, b = map(int, input('Kesrin suret ve mexrecini daxil et: ').split('/'))
+    for i in range(a, 1, -1):
+        if a % i == 0 and b % i == 0:
+            a //= i
+            b //= i
+    print(f'Sadeleshdirmeden sonra: {a}/{b}')
+
+sade()
+'''
+# 14. eve
+
+# 13. eve
+
+# 12. sabah
+
+# 11.
+def qar_sade(a,b):
+    
+    for i in range(2, a + 1):
+        if a % i == 0 and b % i == 0:
+            return False
+            break
+    else:
+        return True
+a, b = map(int, input("Iki natural eded daxil et: ").split(' '))
+print(f'{a} ve {b} qarshiliqli sade ededlerdir' if qar_sade(a,b) else f'{a} ve {b} qarshiliqli sade ededler deyil')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                

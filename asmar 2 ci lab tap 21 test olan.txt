@@ -1,0 +1,272 @@
+#1. Verilmiş 2 ədədin böyüyünü təyin etmək üçün blok sxem qurun və böyük ədədi uyğun
+#mesajla ekrana çıxaran proqramı yazın.
+'''a = int (input(" 1ci ededi daxil edin "))
+b = int ( input("2 ci ededi daxil edin"))
+if a>b:
+    print("en boyuk eded=",a)
+else:
+    print("en boyuk eded=",b)'''
+#2.Daxil edilən ədədin müsbət və ya mənfi olmasını təyin edən blok sxemi qurun və
+#proqramını yazın.
+'''a =int(input("ededi daxil et"))
+if a!=0:
+    if a<0:
+        print("eded menfidir")
+    else:
+        print("eded musbetdir")
+else:
+    print("eded sifira beraberdir")'''
+#3.Tələbənin adını və 3 qiymət daxil etməklə, onun adını, qiymətlərinin ədədi ortasını və
+#orta qiymətinə uyğun gələn nəticəni çap edən blok sxemi çəkin və proqramı yazın.
+'''a= input("telebenin adini daxil et")
+x,y,z=map(int,input("telebelerin qiymetlerini daxil et ").split())
+p=(x+y+z)/3
+if p>=0 and  p<=100:
+    if p>50:
+        if p>=65:
+            if p>=75:
+                if p>=85:
+                    print("Excellent")
+                else:
+                    print("Very Good")
+            else:
+                print("Good")
+        else:
+            print("pass")
+    else:
+        print("Fail")
+else:
+    print("ededi duzgun daxil et")'''
+#4.Ədədin 3-ə bölünməsini yoxlayan proqramı yazın.
+'''a= int(input("ededi daxil edin"))
+if a%3==0:
+    print("eded 3 e tam bolunur")
+else:
+    print("eded 3 e bolunmur")'''
+#5. Ədədin 6-a bölünməsini yoxlayan proqramı yazın.
+'''a=int(input("ededi daxil edin"))
+if a%6==0:
+    print("eded 6 ya tam bolunur")
+else:
+    print("eded 6 ya tam bolunmur")'''
+#6. Ədədin cüt olmasını yoxlayan proqram yazın.
+'''a= int(input("ededi daxil edin"))
+if a%2==0:
+    print("eded cutdur")
+else:
+    print("eded tekdir")'''
+#7. İstifadəçi tərəfindən daxil olunan 3 ədədin cəmi tapılmalıdır, nəzərə alınmalıdır ki, əgər
+#bütün ədədlər eynidirsə, cəmin 3 misli ekranda göstərilməlidir.
+'''a,b,c =map(int,input("ededleri daxil et").split())
+s=a+b+c
+if a==b==c:
+    h=s*3
+    print("cemin 3 misli",h)
+else:
+    print(s)'''
+#8. İstifadəçi tərəfindən daxil olunan 3 ədədin cəmi tapılmalıdır, nəzərə alınmalıdır ki, əgər
+#hər hansı 2 ədəd eynidirsə, cəm sıfır olaraq ekranda göstərilməlidir.
+'''a,b,c=map(int,input("ededleri daxil et").split())
+s=a+b+c
+if a==b or a==c or b==c :
+    print("ededlerin cemi=","0")
+else:
+    print(s)'''
+#9. Kvadrat tənliyi həll edən proqramı yazın. Diskriminanta əsasən tənliyin neçə kökü
+#olduğunu və onların nəyə bərabər olduğunu ekrana çıxarsın, kökü olmadığı halda
+#müvafiq mesaj ekranda göstərilsin.
+#ax^2+bx+c
+'''a= int(input( " a deyisenini daxil edin = "))
+b= int(input( " b deyisenini daxil edin = "))
+c= int(input( " c deyisenini daxil edin = "))
+D=b**2-4*a*c
+import math
+if D>0:
+    print("tenliyin iki koku var")
+    print("tenliyin 1 ci koku = ",-b+math.sqrt(D)/2*a)
+    print("tenliyin 2 ci koku = ", (-b-math.sqrt(D))/2*a)
+elif D<0:
+    print("tenliyin koku yoxdur")
+else:
+    print("tenliyin 1 koku var ")
+    print ("tenliyin koku = ",-b/(2*a))'''
+#10. Endirim tətbiq olunmuş məhsulun qiymətini hesablayan proqramı yazın. Əgər
+#məhsulun qiyməti 1000 manatdan artıqdırsa, 10% endirim tətbiq olunmalıdır.
+'''a= float(input("malin ilkin qiymeti"))
+if a>1000:
+    print("10% endirimle =",(a*90)/100)
+else:
+    print("endirim ucun 1000 manatdan artiq olmalidir teessuf ki bu qiymete endirim yoxdur")'''
+#11.Endirim tətbiq olunmuş məhsulun qiymətini hesablayan proqramı yazın. Əgər
+#məhsulun qiyməti 500 manatdan artıqdırsa – 3%, 1000 manatdan artıqdırsa – 5%
+#endirim tətbiq olunmalıdır.
+'''a= float(input("malin ilkin qiymetini daxil edin"))
+if a>500:
+    print("3% endirimle =",(a*97)/100)
+elif a>1000:
+    print("5% endirimle =", (a*95)/100)
+else:
+    print("teessuf ki bu qiymete endirim yoxdur")'''
+#12. Klaviaturadan daxil edilən iki ədədin müqayisəsini aparan proqram yazın. Proqram
+#hansı ədədin böyük, bərabər və kiçik olduğunu müəyyən etsin.
+'''a= int(input("1 ci ededi daxil edin"))
+b= int(input("2 ci ededi daxil edin"))
+if a>b:
+    print("a bden boyukdur")
+elif a<b:
+    print("a b-den kicikdir")
+else:
+    print("ededler beraberdir")'''
+#13. [0, 100] aralığında təsadüfi 3 ədədin medianını tapan proqram yazın (məs: 5, 15, 12 → 12).
+'''from random import *
+x = randint(0,100)
+y = randint(0,100)
+z = randint(0,100)
+if x<y:
+    if y<z:
+        median=y
+    elif x<z:
+        median=z
+    else:
+        median=x
+else:
+    if x<z:
+        median = x
+    elif y<z:
+        median=z
+    else:
+        median=y
+
+print(x,y,z)
+
+print("ededlerin mediani = ",median)'''
+#14.14. Tərəflərinin sayına görə fiqurun adını müəyyənləşdirən proqram yazın. İstifadəç
+#tərəfindən tərəflərin sayı daxil edilməli və proqram fiqurun adını mesaj kimi çap
+#etməlidir. Proqram tərəflərinin sayı 3 – 10 intervalında olan fiqurları tanımalıdır, digər
+#saylar üçün xəta mesajı ekrana çıxmalıdır.
+#Hint: Triangle – 3, Quadrilateral – 4, Pentagon – 5, Hexagon – 6, Heptagon –7, Octagon – 8, Nonagon
+#– 9, Decagon – 10
+'''a= int(input(" coxbucaqlilarin tereflerinin sayini daxil et 3-10"))
+if a>2:
+    if a>3:
+        if a>4:
+            if a>5:
+                if a>6:
+                    if a>7:
+                        if a>8:
+                            if a>9:
+                                print("Decagon")
+                            else:
+                                print("Nonagon")
+                        else:
+                            print("Octagon")
+                    else:
+                        print("Heptagon")
+                else:
+                    print("Hexagon")
+            else:
+                print("Pentagon")
+        else:
+            print("Quadrilateral")
+    else:
+        print("Triangle")
+else:
+    print("bele coxbucaqli yoxdur")'''
+#15. Ayın günlərinin sayı 28 – 31 intervalında dəyişir. Proqram istifadəçi tərəfindən string
+#kimi daxil edilmiş ayın adına əsasən onun günlərin sayını ekrana çıxarmalıdır. Uzun
+#illəri ayırd etmək məqsədilə Fevral ayı üçün “28 gün” və ya “29 gün” mesajı nəzərdə
+#tutulmalıdır
+'''a= input()
+if a=="yanvar" or a=="mart" or a=="may" or a=="avqust" or a=="oktyabr" or a=="dekabr":
+    print("31 gun")
+elif a=="aprel" or a=="iyul" or a=="sentyabr" or a=="noyabr":
+    print("30 gun")
+elif a=="fevral":
+    print("28 gun ve ya 29 gun")
+else:
+    print("ele ay yoxdur")'''
+#16. Asif, Vasif və Ağasifin yaşlarını ardıcıl olaraq ekrana çıxardın. Onlardan kimin yaşca
+#daha böyük olduğunu müəyyən edin
+'''x=int(input("Asifin yasini daxil edin"))
+y=int(input("vasifin yasini daxil edin"))
+z=int(input("Agasivin yasini daxil edin"))
+if x>0 and y>0 and z>0:
+    if x>y and x>z:
+        print("Asif hamidan boyukdur")
+    elif y>x and y>z:
+        print("Vasif hamidan boyukdur")
+    elif z>x and z>y:
+        print("Agasiv hamidan boyukdur")
+    elif z==x>y:
+        print("Asif ve Agasiv hamidan boyukdur")
+    elif y==x>z:
+        print("Vasif ve Asif hamidan boyukdur")
+    elif y==z>x:
+        print("Vasif ve Agasiv hamidan boyukdur")
+    else:
+        print("hams; eynidir")
+else:
+    print("yashi duz girin")'''
+#17. Üçbucaqlar tərəflərinin uzunluqlarına əsasən bərabərtərəfli, bərabəryanlı və ya
+#müxtəliftərəfli ola bilər. Üçbucaq hər üç tərəfi bir-birinə bərabər olarsa bərabərtərəfli,
+#yalnız 2 tərəfi bir-birinə bərabər olarsa bərabəryanlı, tərəflərinin uzunluqları fərqli
+#olarsa müxtəliftərəfli üçbucaq adlanır. Üçbucağın 3 tərəfinin uzunluqlarını oxuyan və
+#bu uzunluqlara əsasən üçbucağın növünü müəyyən edən proqram yazın.
+a= int(input("ucbucagin 1 terefi ="))
+b= int(input("ucbucagin 1 terefi ="))
+c= int(input("ucbucagin 1 terefi ="))
+if a==b and a==c:
+    print("beraberterefli")
+elif a==b or a==c or b==c:
+    print("beraberyanli")
+else:
+    print("ixityari ucbucaqdir")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            

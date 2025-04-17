@@ -1,0 +1,222 @@
+﻿# Task 1. d) Ən kiçik elementinin yerləşdiyi sütun elementlərinin cəmini tapın.
+from random import randint
+'''N = int(input('Setirlerin sayi: '))
+M = int(input('Sutunlarin sayi: '))
+A = [[randint(-10,10) for _ in range(M)] for _ in range(N)]
+minA = A[0][0]
+indeks = 0
+for i in range(N):
+    for j in range(M):
+        if A[i][j] < minA:
+            minA = A[i][j]
+            indeks = j
+        print('%4d' %A[i][j], end = '')
+    print()
+
+print(minA, indeks)
+summ = 0
+for i in range(N):
+    summ += A[i][indeks]
+print(summ)'''
+# Task 1. e) Bash və Second dioqanaldakı elementləri digər listlərə yığın, və hər iki listin cəmlərinin müqayisəsini ekrana çıxaran proqram yazın.
+'''N = int(input('Kvadrat matrisin olcusu: '))
+A = [[randint(-10,10) for _ in range(N)] for _ in range(N)]
+for i in range(N):
+    for j in range(N):
+        print('{:4d}'.format(A[i][j]), end = '')
+    print()
+Main = []; summ_Main = 0
+second = []; summ_second = 0
+for i in range(N):
+    Main += [A[i][i]]
+    second += [A[i][N-1-i]]
+    summ_Main += A[i][i]
+    summ_second += A[i][N-1-i]
+print(f'Main diaqonal: {Main}, summ = {summ_Main}')
+print(f'Second diaqonal: {second}, summ = {summ_second}')
+print(f'Main diaq summi greater' if summ_Main > summ_second else f'', end = '')
+print(f'Second diaq summi greater' if summ_Main < summ_second else f'', end = '')
+print(f'Diaqonallarin summi beraberdir' if summ_Main == summ_second else f'')'''
+# Task 5.
+'''def print_Matrix(Matris):
+    for i in range(N):
+        for j in range(N):
+            print(f'{Matris[i][j]}', end = '\t')
+        print()
+from random import randint
+N = int(input("Kvadrat matrisin olcusu: "))
+A = [[randint(10,20) for _ in range(N)] for _ in range(N)]
+print_Matrix(A)'''
+'''print(f'O letter:')
+for i in range(N):
+    for j in range(N):
+        if i == 0 or i == N-1 or j == 0 or j == N-1:
+            A[i][j] = '++'
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+'''print(f'Z letter:')
+for i in range(N):
+    for j in range(N):
+        if i == 0 or i == N-1 or i+j == N-1:
+            A[i][j] = '***'
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+'''print(f'T letter:')
+for i in range(N):
+    for j in range(N):
+        if i == 0 or j == N//2:
+            A[i][j] = '***'
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+'''print(f'Y letter:')
+for i in range(N):
+    for j in range(N):
+        if i <= N//2:
+            A[i][i] = '***'
+            A[i][N-1-i] = '***'
+        else:
+            A[i][N//2] = '***'
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+'''print(f'A letter:')
+for i in range(N):
+    for j in range(N):
+        if i == 0 or i == N//2 or j == 0 or j == N-1:
+            A[i][j] = '***'
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+'''print(f'M letter:')
+for i in range(N):
+    for j in range(N):
+        if i <= N//2:
+            A[i][i] = '***'
+            A[i][N-1-i] = '***'
+        if j == 0 or j == N-1:
+            A[i][j] = '***'
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+# Task 4.
+# a)
+'''def print_Matrix(Matris):
+    for i in range(N):
+        for j in range(N):
+            print(f'{Matris[i][j]}', end = '\t')
+        print()
+        
+from random import randint
+N = int(input("size of square matrix: "))
+A = [[randint(10,99) for _ in range(N)] for _ in range(N)]
+print_Matrix(A)'''
+
+'''summ = 0
+for i in range(N):
+    for j in range(N):
+        summ += A[i][j]
+orta = summ/N**2
+print(orta)
+for i in range(N):
+    for j in range(N):
+        if A[i][j] < orta:
+            A[i][j] = 0
+        else:
+            A[i][j] = 255
+print_Matrix(A)'''
+# b)
+print()
+'''for i in range(N):
+    for j in range(N):
+        if i < j:
+            if A[i][j] > 50:
+                A[i][j] = 255
+            else:
+                A[i][j] = 0
+print_Matrix(A)'''
+
+# c)
+'''for i in range(N):
+    for j in range(N):
+        if i <= j:
+            A[i][j] = 0
+print_Matrix(A)'''
+
+# d)
+'''for i in range(N):
+    for j in range(N-1,-1,-1):
+        print(f'{A[i][j]}', end = '\t')
+    print()'''
+# e)
+'''
+for i in range(N-1,-1,-1):
+    for j in range(N):
+        print(f'{A[i][j]}', end = '\t')
+    print()
+'''    
+# f)
+'''def print_Matrix(Matris):
+    for i in range(N):
+        for j in range(N):
+            print(f'{Matris[i][j]}', end = '\t')
+        print()
+        
+from random import randint
+N = int(input("Kvadrat matrisin olcusu: "))
+A = [[randint(10,99) for _ in range(N)] for _ in range(N)]
+A90right = [[A[N-1-i][j] for i in range(N)] for j in range(N)]
+A90left = [[A[i][N-1-j] for i in range(N)] for j in range(N)] 
+print_Matrix(A)
+print(f'A right = ')
+print_Matrix(A90right)
+print(f'A left = ')
+print_Matrix(A90left)'''
+A = [[0 for _ in range(5)]]*5
+print(A)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

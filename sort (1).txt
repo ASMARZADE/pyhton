@@ -1,0 +1,195 @@
+'''def selectionSort(A):
+    for i in range(len(A)-1):
+        Min=i
+        for k in range(i+1,len(A)):
+            if A[k]<A[Min]:
+                Min=k
+        if Min!=i:
+            A[i],A[Min]=A[Min],A[i]
+    return A
+from random import *
+A=[randint(10,9999) for _ in range(10)]
+print(f'A={A}')
+print(f'sort_A={selectionSort(A)}')'''
+
+
+'''def ilk_reqem(eded):
+    while eded>9:
+        eded//=10
+    return eded
+
+def selectionSort(A):
+    for i in range(len(A)-1):
+        Min=i
+        for k in range(i+1,len(A)):
+            if ilk_reqem(A[k])<ilk_reqem(A[Min]):
+                Min=k
+        if Min!=i:
+            A[i],A[Min]=A[Min],A[i]
+    return A
+from random import *
+A=[randint(10,9999) for _ in range(10)]
+print(f'A={A}')
+print(f'sort_A={selectionSort(A)}')'''
+
+
+'''def bubbleSort(A):
+    for i in range(len(A)-1):
+        for j in range(len(A)-2,i-1,-1):
+            if A[j]>A[j+1]:
+                A[j],A[j+1]=A[j+1],A[j]
+    return A
+from random import *
+A=[randint(10,20) for _ in range(10)]
+print(f'A={A}')
+print(f'sort_A={bubbleSort(A)}')'''
+
+
+'''def bubbleSort_say(A):
+    say=0
+    for i in range(len(A)-1):
+        for j in range(len(A)-2,i-1,-1):
+            if A[j]>A[j+1]:
+                A[j],A[j+1]=A[j+1],A[j]
+                say+=1
+    return A,say
+from random import *
+A=[randint(10,20) for _ in range(10)]
+print(f'A={A}')
+print(f'sort_A={bubbleSort_say(A)}')'''
+
+
+'''from random import *
+def quickSort(A):
+    if len(A)<=1:
+        return A
+    X=choice(A)
+    B1=[b for b in A if b<X]
+    BX=[b for b in A if b==X]
+    B2=[b for b in A if b>X]
+    return qSort(B1)+BX+qSort(B2)
+from random import *
+A=[randint(10,20) for _ in range(10)]
+print(f'A={A}')
+print(f'sort_A={quickSort(A)}')'''
+
+'''def quickSort(A,nStart,nEnd):
+    if nStart>=nEnd:
+        return 
+    L=nStart
+    R=nEnd
+    while L<=R:
+        while A[L]<X:
+            L+=1
+        while A[R]>X:
+            R-=1
+    if L<=R:
+        A[L],A[R]=A[R],A[L]
+        L+=1
+        R-=1
+    quickSort(A,nStart,R)
+    quickSort(A,L,nEnd)
+from random import *
+A=[randint(10,20) for _ in range(10)]
+nStart=0
+nEnd=0
+print(f'A={A}')
+print(f'sort_A={quickSort(A,nStart,nEnd)}')'''
+
+'''def binary_search(target,List):
+    L=0
+    R=len(List)-1
+    while L<=R:
+        Middle=(L+R)//2
+        if target<List[Middle]:
+            R=Middle-1
+        elif List[Middle]>target:
+            L=Middle+1
+        else:
+            return True
+    return False
+List=[int(input()) for i in range(5)];target=int(input())
+print(binary_search(target,List)'''
+
+'''def binary_search(target,List):
+    L=0
+    R=len(List)-1
+    while L<=R:
+        Middle=(L+R)//2
+        if target<List[Middle]:
+            R=Middle-1
+        elif List[Middle]>target:
+            L=Middle+1
+        else:
+            return True
+    return False
+from random import *
+List=[randint(1,10) for _ in range(10)]
+print(List)
+A=List
+for i in range(len(A)-1):
+    Min=i
+    for k in range(i+1,len(A)):
+        if A[k]<A[Min]:
+            Min=k
+    if Min!=i:
+        A[i],A[Min]=A[Min],A[i]
+print(A)
+target=int(input())
+print(f'{target} bu siyahida movcuddur' if binary_search(target,List) else f'{target} bu siyahida movcud deyil')''' 
+
+##Matris
+'''A=[[0,0,0,0,0]]*5
+print(A)'''
+'''from random import *
+A=[[randint(10,20) for _ in range(5)] for _ in range(5)]
+print(A)
+for i in range(5):
+    for j in range(5):
+        print(f'{A[i][j]:4d}',end="")
+    print()'''
+
+'''from random import *
+A=[[randint(10,20) for _ in range(5)] for _ in range(5)]
+print(A)
+maxx=A[0][0]
+for i in range(5):
+    for j in range(5):
+        if A[i][j]>maxx:
+            maxx=A[i][j]
+            indeks=(i,j)
+        print(f'{A[i][j]:6d}',end="")
+    print()
+print(f'Maksimal element={maxx}\nBu elementin indeksi={indeks}')
+print(f'Bas dioqanal elementler:',end="")
+for i in range(5):
+    print(A[i][i],end=' ')
+print(f'\nKomekci dioqanal elementler:',end="")
+for i in range(5):
+    print(A[i][4-i],end=' ')
+print(f'\nBirinci setir elemenetler:',end="")
+for setir in A:
+    print(*setir)
+    break
+print(f'Birinci setir elemenetler:',end="")
+for setir in A:
+    print(setir[0],end=' ')'''
+
+'''from random import *
+N=int(input("Kvadrat matrisin olcusu:"))
+Matris=[[randint(10,20) for _ in range(N)] for _ in range(N)]
+for i in range(N):
+    for j in range(N):
+        print(f'{Matris[i][j]}',end="\t")
+    print()
+print()
+
+for i in range(N):
+    for j in range(N):
+        Matris[i][0]="+"
+        Matris[i][N-1]="+"
+        Matris[i][i]="+"
+        print(f'{Matris[i][j]}',end="\t")
+    print()'''    
+
+

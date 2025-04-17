@@ -1,0 +1,215 @@
+#task1
+'''a=int(input("enter a"))
+x=int(input("enter x"))
+h=1
+if x>0:
+    for i in range(1,x+1):
+        h*=a
+else:
+    for i in range(x,0):
+        h/=a
+print(h)'''
+#task2
+'''a=int(input("enter a"))
+h=1
+if a>0:
+    for i in range(1,a+1):
+        h*=a
+    print(h)
+elif a==0:
+    h=1
+    print(h)
+else:
+    print("ededi duzgun daxil et")'''
+#task3
+'''for i in range(1,51):
+    if i % 2 == 0:
+        print(f'cut ededler={i}')'''
+#task4
+'''cem=0
+N=int(input("enter N"))
+if N>0:
+    for i in range(1,N+1):
+        cem+=i
+    print(cem)
+else:
+    print("N i duzgun daxil edin")'''
+#task5
+'''N=int(input("enter N"))
+X=int(input("enter X"))
+cem=0
+for i in range(N+1):
+    cem+=(-X)**i
+print(cem)'''
+#task6
+'''for i in range(100,0,-1):
+    print(i)'''
+#task7
+'''for i in range(11):
+    print("eded ozu = ",i,"ededin kvadrati = ",i*i)'''
+#TASK8
+'''cem=0
+hasil=1
+for i in range(11):
+    if i % 2==0:
+        cem+=i
+    else:
+        hasil*=i
+print(f'tek ededlerin hasili ={hasil}\ncut ededlerin cemi ={cem} ')
+'''
+#task9
+'''A=int(input("enter A"))
+B=int(input("enter B"))
+C=int(input("enter C"))
+if A<B:
+    for i in range(A,B+1):
+        if i % C == 0:
+            print(i)
+else:
+    print("diapazonu duzgun daxil et !")'''
+#task10
+'''A=int(input("enter A"))
+B=int(input("enter B"))
+count_cut=0
+count_tek=0
+if A<B:
+    for i in range(A,B+1):
+        if i % 2 == 0:
+            count_cut+=1
+        else:
+            count_tek+=1
+print(f'cut ededlerin sayi {count_cut}e beraberdir \n tek ededlerin sayi {count_tek} beraberdir')
+'''
+#task11
+'''from random import *
+for i in range(1,11):
+    x=randint(1,100)
+    if x%2==0:
+        print(x,"eded cutdur")
+    else:
+        print(x,"eded tekdir")
+ '''
+#task 12
+'''A=int(input("enter A"))
+B=int(input("enter B"))
+if 0<A<B:
+    for i in range(A,B+1):
+        print(f'{i}*{i}={i*i}')
+else:
+    print("diapazonu duzgun daxil edin")'''
+#task 13
+'''a = int(input('a: '))
+b = int(input('b: '))
+p = 0
+for i in range(abs(a)):
+    p += b
+if a<0 and b>0:
+    print(f' ({a}) * {b} = {-p}')
+elif a>0 and b <0:
+    print(f' {a}* ({b}) ={p}')
+elif a<0 and b <0:
+    print(f' ({a})* ({b}) ={p}')
+else:
+     print(f' {a}* {b} ={p}')'''
+#task 14****************
+'''pi=3
+for i in range(15):
+    pi+=((-1)**i*4)/((2*i+2)*(2*i+3)*(2*i+4))
+print(pi)
+
+'''
+#task 15
+'''for i in range(10000,100000):
+    if i%133 == 125 and i%134==111:
+        print(i)'''
+#task 16*********
+'''a=int(input('enter '))
+b=int(input("enter b"))
+for i in range (a,1,-1):
+    if a%i == 0 and b % i == 0:
+        break
+        print(i)'''
+#task 17
+'''A, B = map(int, input("Intervalın sərhədlərini daxil edin (A və B natural ədədlər, A < B): ").split())
+
+# A və B arasında olan bütün sadə ədədləri təyin etmək və çap etmək
+print("A və B arasında olan bütün sadə ədədlər:")
+for j in range(A, B + 1):
+    if j > 1:
+        for i in range(2, int(j ** 0.5) + 1):
+            if j % i == 0:
+                break
+        else:
+            print(j, end=" ")
+
+'''
+
+
+#task 18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    

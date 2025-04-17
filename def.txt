@@ -1,0 +1,75 @@
+'''
+def ebob_ekob(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+a, b = map(int, input('Iki natural eded: ').split(' '))
+print(f'EBOB({a}, {b}) = {ebob_ekob(a, b)} \nEKOB({a}, {b})={a * b // ebob_ekob(a, b)}')
+'''
+# 12.
+'''
+def sade(eded):
+    if eded == 1:
+        return False
+    for i in range(2, eded):
+        if eded % i == 0:
+            return False
+    else:
+        return True
+    
+def hiper_sade(eded):
+    if sade(eded) is False:
+        return False
+    else:
+        n = eded
+        while n > 0:
+            n //= 10
+            if sade(n) is False:
+                return False
+        else:
+            return True
+eded = int(input('Eded: '))
+print(f'{eded} hiper-sadedir' if hiper_sade(eded) else f'{eded} hiper-sade deyil')
+'''
+
+# 10.
+def kv3(eded):
+    from math import sqrt
+    say = 0
+    n = eded
+    while n > 0:
+        n //= 10
+        say += 1
+    return sqrt(eded // 10**(say - 1) + eded % 10) > 3
+        
+    
+
+
+
+    
+        
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

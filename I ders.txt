@@ -1,0 +1,43 @@
+'''print("Salam, Dunya!")'''
+
+'''Ad = input("Adinizi daxil edin:")
+print("Salam, "+Ad)'''
+
+'''a = int(input("Ededi daxil et:"))
+print("Bu ededin kvadrati:",a*a)'''
+
+'''a,b,c,d,e = map(int,input("Ededleri daxil et:").split(','))
+s = a + b + c + d + e
+o = s/5
+p = a * b * c * d * e
+print("Cem:",s)
+print("Orta qiymet:",o)
+print("Hasil:",p)'''
+
+'''from math import *
+x = pi
+print("{:4.2f}".format(x))
+f = floor(x)
+c = ceil(x)
+print(f)
+print(c)
+print(exp(1))'''
+
+from random import *
+x = randint(1000,9999)
+print("Tesadufi eded:",x)
+I = x//1000
+q = x%1000
+II = q//100
+q = q%100
+III = q//10
+IV = q%10
+print(I,II,III,IV,sep=",")
+print("I reqem:",I)
+print("II reqem:",II)
+print("III reqem:",III)
+print("IV reqem:", IV)
+print("Cevrilmish eded:",I+10*II+100*III+1000*IV)
+y = uniform(3.5,9.8)
+print("{:4.1f}".format(y))
+
